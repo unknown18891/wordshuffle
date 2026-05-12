@@ -1,6 +1,4 @@
-[wordshuffle.html](https://github.com/user-attachments/files/27573527/wordshuffle.html)
-<!DOCTYPE html>
-<html lang="en">
+ <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
@@ -551,70 +549,7 @@ nav {
 .share-btn.copy { background: rgba(255,255,255,.06); color: var(--text); border: 1px solid var(--card-border); }
 .share-btn.copy:hover { background: rgba(255,255,255,.1); }
 
-/* ── BATTLE MODE ── */
-.battle-section { padding: clamp(60px,8vh,100px) clamp(16px,4vw,48px); max-width: 900px; margin: 0 auto; }
-.battle-hero { text-align: center; margin-bottom: 40px; }
-.vs-badge { display: inline-block; background: linear-gradient(135deg,var(--orange),var(--pink)); color: #fff; font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; padding: 5px 14px; border-radius: 100px; margin-bottom: 16px; }
-.battle-arena {
-  display: grid; grid-template-columns: 1fr auto 1fr; gap: 16px; align-items: center; margin-bottom: 28px;
-}
-.battle-player {
-  background: var(--bg2); border: 1px solid var(--card-border);
-  border-radius: var(--radius-xl); padding: 20px; text-align: center; transition: all .3s;
-}
-.battle-player.me { border-color: rgba(124,58,237,.35); }
-.battle-player.them { border-color: rgba(236,72,153,.35); }
-.bp-avatar { width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 800; margin: 0 auto 8px; }
-.bp-name { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
-.bp-score { font-size: 28px; font-weight: 900; font-family: 'JetBrains Mono', monospace; }
-.bp-score.blue { color: var(--violet-light); }
-.bp-score.pink { color: var(--pink-light); }
-.bp-typing { font-size: 12px; color: var(--cyan); margin-top: 6px; display: flex; align-items: center; gap: 4px; justify-content: center; }
-.typing-dots span { animation: typingBounce .8s ease infinite; display: inline-block; }
-.typing-dots span:nth-child(2) { animation-delay: .15s; }
-.typing-dots span:nth-child(3) { animation-delay: .3s; }
-@keyframes typingBounce { 0%,60%,100%{transform:translateY(0)} 30%{transform:translateY(-6px)} }
-.vs-divider { text-align: center; }
-.vs-text { font-size: 22px; font-weight: 900; background: linear-gradient(135deg,var(--orange),var(--red)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
-.battle-modes { display: grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap: 12px; }
-.battle-mode-card {
-  background: var(--bg2); border: 1.5px solid var(--card-border);
-  border-radius: var(--radius-lg); padding: 20px; cursor: pointer; transition: all .2s; text-align: center;
-}
-.battle-mode-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,.4); }
-.battle-mode-card.ranked { border-color: rgba(234,179,8,.3); background: rgba(234,179,8,.04); }
-.battle-mode-card.casual { border-color: rgba(34,197,94,.3); background: rgba(34,197,94,.04); }
-.battle-mode-card.custom { border-color: rgba(6,182,212,.3); background: rgba(6,182,212,.04); }
-.bmc-icon { font-size: 32px; margin-bottom: 10px; }
-.bmc-title { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
-.bmc-sub { font-size: 12px; color: var(--text2); }
 
-/* ── MONETIZE ── */
-.shop-section { padding: clamp(60px,8vh,100px) clamp(16px,4vw,48px); max-width: 1100px; margin: 0 auto; }
-.shop-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 16px; }
-.shop-card {
-  background: var(--bg2); border: 1px solid var(--card-border);
-  border-radius: var(--radius-xl); padding: 24px; position: relative; overflow: hidden; transition: all .3s;
-}
-.shop-card:hover { transform: translateY(-4px); box-shadow: 0 24px 60px rgba(0,0,0,.5); }
-.shop-card.featured { border-color: rgba(234,179,8,.3); box-shadow: 0 0 40px rgba(234,179,8,.08); }
-.featured-badge {
-  position: absolute; top: 12px; right: -24px; background: linear-gradient(90deg,var(--gold),var(--orange));
-  color: #fff; font-size: 10px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;
-  padding: 4px 40px; transform: rotate(45deg); transform-origin: center;
-}
-.shop-icon { font-size: 40px; margin-bottom: 14px; }
-.shop-title { font-size: 18px; font-weight: 800; margin-bottom: 6px; }
-.shop-desc { font-size: 13px; color: var(--text2); line-height: 1.6; margin-bottom: 16px; }
-.shop-price { font-size: 26px; font-weight: 900; margin-bottom: 14px; }
-.shop-price span { font-size: 14px; font-weight: 400; color: var(--text2); }
-.shop-perks { display: flex; flex-direction: column; gap: 6px; margin-bottom: 18px; }
-.shop-perk { font-size: 13px; color: var(--text2); display: flex; align-items: center; gap: 8px; }
-.shop-perk::before { content: '✓'; color: var(--green); font-weight: 700; flex-shrink: 0; }
-.btn-shop { width: 100%; padding: 12px; font-size: 14px; font-weight: 700; border-radius: var(--radius); transition: all .2s; }
-.btn-shop.premium { background: linear-gradient(135deg,var(--gold),var(--orange)); color: var(--bg); }
-.btn-shop.standard { background: rgba(255,255,255,.06); border: 1px solid var(--card-border); color: var(--text); }
-.btn-shop:hover { transform: translateY(-1px); filter: brightness(1.1); }
 
 /* ── FOOTER ── */
 footer { background: var(--bg2); border-top: 1px solid var(--card-border); padding: clamp(40px,6vw,80px) clamp(16px,4vw,48px) clamp(24px,4vw,40px); }
@@ -650,16 +585,14 @@ footer { background: var(--bg2); border-top: 1px solid var(--card-border); paddi
   .nav-actions .btn-ghost { display: none; }
   .hamburger { display: flex; }
   .footer-inner { grid-template-columns: 1fr 1fr; }
-  .battle-arena { grid-template-columns: 1fr 60px 1fr; gap: 8px; }
+
 }
 @media(max-width:600px) {
   .hero-stats { gap: 20px; }
   .game-top { flex-direction: column; align-items: flex-start; }
   .footer-inner { grid-template-columns: 1fr; gap: 24px; }
   .footer-col:nth-child(3),.footer-col:nth-child(4) { display: none; }
-  .battle-arena { grid-template-columns: 1fr; gap: 12px; }
-  .vs-divider { order: -1; }
-  .lb-header, .lb-row { grid-template-columns: 36px 1fr 70px; }
+.lb-header, .lb-row { grid-template-columns: 36px 1fr 70px; }
   .lb-streak { display: none; }
 }
 </style>
@@ -681,10 +614,8 @@ footer { background: var(--bg2); border-top: 1px solid var(--card-border); paddi
   <a onclick="showPage('home');closeMob()" id="mml-home" class="active">🏠 Home</a>
   <a onclick="showPage('game');closeMob()" id="mml-game">🎮 Play</a>
   <a onclick="showPage('daily');closeMob()" id="mml-daily">📅 Daily Challenge</a>
-  <a onclick="showPage('battle');closeMob()" id="mml-battle">⚔️ Battle</a>
   <a onclick="showPage('leaderboard');closeMob()" id="mml-leaderboard">🏆 Leaderboard</a>
   <a onclick="showPage('ai');closeMob()" id="mml-ai">🤖 AI Generator</a>
-  <a onclick="showPage('shop');closeMob()" id="mml-shop">💎 Shop</a>
 </div>
 
 <div class="layer">
@@ -698,10 +629,8 @@ footer { background: var(--bg2); border-top: 1px solid var(--card-border); paddi
     <a onclick="showPage('home')" id="nl-home" class="active">Home</a>
     <a onclick="showPage('game')" id="nl-game">Play</a>
     <a onclick="showPage('daily')" id="nl-daily">Daily</a>
-    <a onclick="showPage('battle')" id="nl-battle">Battle</a>
     <a onclick="showPage('leaderboard')" id="nl-leaderboard">Leaderboard</a>
     <a onclick="showPage('ai')" id="nl-ai">AI</a>
-    <a onclick="showPage('shop')" id="nl-shop">Shop</a>
   </div>
   <div class="nav-actions">
     <button class="btn-ghost" onclick="showPage('leaderboard')">👤 @WordMaster</button>
@@ -767,12 +696,6 @@ footer { background: var(--bg2); border-top: 1px solid var(--card-border); paddi
         <div class="feature-desc">Claude AI generates fresh themed packs daily — gaming slang, movie titles, internet memes, and impossible mode for true word nerds.</div>
         <div class="feature-tags"><span class="ftag">🎮 Gaming Mode</span><span class="ftag">🎬 Movie Mode</span><span class="ftag">🔥 Meme Mode</span></div>
       </div>
-      <div class="feature-card o">
-        <div class="feature-icon">⚔️</div>
-        <div class="feature-title">Real-Time Battles</div>
-        <div class="feature-desc">Challenge friends or enter ranked matchmaking. Watch their live typing indicator as you race to solve first — pure adrenaline.</div>
-        <div class="feature-tags"><span class="ftag">🏅 Ranked</span><span class="ftag">👥 Friend Battles</span><span class="ftag">🎯 Custom Rooms</span></div>
-      </div>
       <div class="feature-card g">
         <div class="feature-icon">🏆</div>
         <div class="feature-title">Daily Global Competition</div>
@@ -806,7 +729,7 @@ footer { background: var(--bg2); border-top: 1px solid var(--card-border); paddi
           <div class="soc-btn">𝕏</div><div class="soc-btn">📱</div><div class="soc-btn">▶</div><div class="soc-btn">in</div>
         </div>
       </div>
-      <div class="footer-col"><h4>Game</h4><a onclick="showPage('game')">Play Now</a><a onclick="showPage('daily')">Daily Challenge</a><a onclick="showPage('battle')">Battle Mode</a><a onclick="showPage('leaderboard')">Leaderboard</a></div>
+      <div class="footer-col"><h4>Game</h4><a onclick="showPage('game')">Play Now</a><a onclick="showPage('daily')">Daily Challenge</a><a onclick="showPage('leaderboard')">Leaderboard</a></div>
       <div class="footer-col"><h4>Features</h4><a onclick="showPage('ai')">AI Generator</a><a>Word Packs</a><a>Custom Puzzles</a><a>Seasonal Events</a></div>
       <div class="footer-col"><h4>Company</h4><a>About</a><a>Blog</a><a>Careers</a><a>Contact</a></div>
     </div>
@@ -1019,68 +942,6 @@ footer { background: var(--bg2); border-top: 1px solid var(--card-border); paddi
   </div>
 </div>
 
-<!-- ══ BATTLE MODE ══ -->
-<div id="page-battle" class="page">
-  <div class="battle-section">
-    <div class="battle-hero">
-      <div class="vs-badge">⚔️ BATTLE MODE</div>
-      <h2 class="sec-title" style="margin-bottom:8px;">Real-Time <span>Word Wars</span></h2>
-      <p style="font-size:16px;color:var(--text2);">Head-to-head scramble battles. First to solve wins. No mercy.</p>
-    </div>
-
-    <div class="battle-arena">
-      <div class="battle-player me">
-        <div class="bp-avatar" style="background:linear-gradient(135deg,var(--violet),var(--pink));color:#fff;">WM</div>
-        <div class="bp-name">WordMaster</div>
-        <div style="font-size:11px;color:var(--text3);margin-bottom:10px;">Lv.7 · 1,247 ELO</div>
-        <div class="bp-score blue" id="battleScoreMe">0</div>
-        <div class="bp-typing">
-          <span style="font-size:11px;">Ready</span>
-        </div>
-      </div>
-      <div class="vs-divider">
-        <div class="vs-text">VS</div>
-        <div style="font-size:11px;color:var(--text3);margin-top:6px;">Best of 5</div>
-      </div>
-      <div class="battle-player them">
-        <div class="bp-avatar" style="background:linear-gradient(135deg,var(--pink),var(--orange));color:#fff;">SK</div>
-        <div class="bp-name">SpeedKing_ZA</div>
-        <div style="font-size:11px;color:var(--text3);margin-bottom:10px;">Lv.12 · 1,891 ELO</div>
-        <div class="bp-score pink" id="battleScoreThem">0</div>
-        <div class="bp-typing">
-          <span style="font-size:11px;color:var(--cyan);">Typing</span>
-          <span class="typing-dots"><span>.</span><span>.</span><span>.</span></span>
-        </div>
-      </div>
-    </div>
-
-    <div style="text-align:center;margin-bottom:28px;">
-      <button class="cta-primary" onclick="startBattle()" style="font-size:16px;padding:14px 40px;">⚔️ Find Battle</button>
-      <div style="font-size:13px;color:var(--text3);margin-top:10px;">2,341 players in queue</div>
-    </div>
-
-    <div class="sec-hdr" style="margin-bottom:20px;">
-      <div class="sec-eyebrow">Choose Your Mode</div>
-    </div>
-    <div class="battle-modes">
-      <div class="battle-mode-card ranked" onclick="showToast('🏅 Joining ranked queue...','success')">
-        <div class="bmc-icon">🏅</div>
-        <div class="bmc-title">Ranked</div>
-        <div class="bmc-sub">Earn ELO · Seasonal rewards · Top 100 placement</div>
-      </div>
-      <div class="battle-mode-card casual" onclick="showToast('😎 Finding casual match...','success')">
-        <div class="bmc-icon">😎</div>
-        <div class="bmc-title">Casual</div>
-        <div class="bmc-sub">No ELO impact · Practice · New players welcome</div>
-      </div>
-      <div class="battle-mode-card custom" onclick="showToast('📋 Creating custom room...','success')">
-        <div class="bmc-icon">🔗</div>
-        <div class="bmc-title">Custom Room</div>
-        <div class="bmc-sub">Invite friends · Set rules · Choose word packs</div>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- ══ LEADERBOARD ══ -->
 <div id="page-leaderboard" class="page">
@@ -1225,72 +1086,6 @@ footer { background: var(--bg2); border-top: 1px solid var(--card-border); paddi
   </div>
 </div>
 
-<!-- ══ SHOP ══ -->
-<div id="page-shop" class="page">
-  <div class="shop-section">
-    <div class="sec-hdr">
-      <div class="sec-eyebrow">Premium Store</div>
-      <h2 class="sec-title">Level Up Your <span>Experience</span></h2>
-      <p class="sec-sub">Unlock premium themes, exclusive word packs, and cosmetics that make your profile shine.</p>
-    </div>
-    <div class="shop-grid">
-      <div class="shop-card featured">
-        <div class="featured-badge">BEST VALUE</div>
-        <div class="shop-icon">⚡</div>
-        <div class="shop-title">Battle Pass</div>
-        <div class="shop-desc">100 tiers of exclusive rewards, seasonal cosmetics, and XP boosts every season.</div>
-        <div class="shop-price">R149<span>/season</span></div>
-        <div class="shop-perks">
-          <div class="shop-perk">100 tier exclusive rewards</div>
-          <div class="shop-perk">2x XP boost all season</div>
-          <div class="shop-perk">Exclusive animated theme</div>
-          <div class="shop-perk">Premium word packs</div>
-          <div class="shop-perk">Seasonal badge</div>
-        </div>
-        <button class="btn-shop premium" onclick="showToast('⚡ Battle Pass activated!','success')">Get Battle Pass</button>
-      </div>
-      <div class="shop-card">
-        <div class="shop-icon">💎</div>
-        <div class="shop-title">Pro Membership</div>
-        <div class="shop-desc">Unlimited hints, ad-free, custom avatars, early access to new modes, and priority matchmaking.</div>
-        <div class="shop-price">R79<span>/month</span></div>
-        <div class="shop-perks">
-          <div class="shop-perk">Unlimited hints</div>
-          <div class="shop-perk">No ads — ever</div>
-          <div class="shop-perk">Custom avatar frames</div>
-          <div class="shop-perk">Early access features</div>
-        </div>
-        <button class="btn-shop standard" onclick="showToast('💎 Pro activated!','success')">Go Pro</button>
-      </div>
-      <div class="shop-card">
-        <div class="shop-icon">🎨</div>
-        <div class="shop-title">Theme Bundles</div>
-        <div class="shop-desc">Cyberpunk, Ocean, Galaxy, Fire, Matrix — premium visual themes that transform your entire game.</div>
-        <div class="shop-price">R39<span>/bundle</span></div>
-        <div class="shop-perks">
-          <div class="shop-perk">5 premium themes</div>
-          <div class="shop-perk">Animated backgrounds</div>
-          <div class="shop-perk">Custom letter styles</div>
-          <div class="shop-perk">Profile showcase</div>
-        </div>
-        <button class="btn-shop standard" onclick="showToast('🎨 Themes unlocked!','success')">Buy Themes</button>
-      </div>
-      <div class="shop-card">
-        <div class="shop-icon">📦</div>
-        <div class="shop-title">Word Packs</div>
-        <div class="shop-desc">Curated premium packs: Medical terms, Legal jargon, Crypto slang, and Celebrity word games.</div>
-        <div class="shop-price">R19<span>/pack</span></div>
-        <div class="shop-perks">
-          <div class="shop-perk">500+ words per pack</div>
-          <div class="shop-perk">Unique themes</div>
-          <div class="shop-perk">Difficulty variations</div>
-          <div class="shop-perk">Hints included</div>
-        </div>
-        <button class="btn-shop standard" onclick="showToast('📦 Pack added to library!','success')">Buy Pack</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 </div><!-- end .layer -->
 
@@ -1318,7 +1113,7 @@ for(let i=0;i<20;i++){
 // ════════════════════════════════════════
 // NAVIGATION
 // ════════════════════════════════════════
-const PAGES = ['home','game','daily','battle','leaderboard','ai','share','shop'];
+const PAGES = ['home','game','daily','leaderboard','ai','share'];
 function showPage(n){
   PAGES.forEach(p=>{
     const pg=document.getElementById('page-'+p); if(pg) pg.classList.remove('active');
@@ -1681,19 +1476,6 @@ Respond ONLY with valid JSON array, no markdown, no preamble:
 }
 
 function useAIWordPack(){ showPage('game'); initGame(); showToast('🎮 AI word pack loaded!','success'); }
-
-// ════════════════════════════════════════
-// BATTLE
-// ════════════════════════════════════════
-function startBattle(){
-  showToast('⚔️ Searching for opponent...','success');
-  let score=0;
-  const iv=setInterval(()=>{
-    score+=Math.floor(Math.random()*50+10);
-    document.getElementById('battleScoreThem').textContent=score;
-    if(score>300){clearInterval(iv);showToast('⚔️ Opponent found! SpeedKing_ZA — READY?','success');}
-  },300);
-}
 
 // ════════════════════════════════════════
 // SHARE
